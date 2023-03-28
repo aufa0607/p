@@ -42,6 +42,17 @@ loadstring(game:HttpGet(("https://pastebin.com/raw/nvDa9tQM"),true))();
   	end    
 })
 
+
+local TutTab = Window:MakeTab({
+	Name = "visual",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = TutTab:AddSection({
+	Name = "visual section"
+})
+
 TutTab:AddButton({
 	Name = "esp",
 	Callback = function(Value)
