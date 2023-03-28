@@ -23,15 +23,15 @@ TutTab:AddButton({
 	Name = "antilag",
 	Callback = function(Value)
       		print("suscribe")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/p"))();
   	end    
 })
 
-Tab:AddToggle({
+TutTab:AddToggle({
 	Name = "noclip",
 	Default = false,
 	Callback = function(Value)
 		print(Value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/p"))();
 	end    
 })
 
