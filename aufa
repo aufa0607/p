@@ -19,17 +19,17 @@ local Section = TutTab:AddSection({
 	Name = "viruspet Section"
 })
 
-Tab:AddButton({
+TutTab:AddButton({
 	Name = "scampet",
 	Callback = function()
-      		print("suscribe")
+      		print("fly")
   	end    
 })
 
-Tab:AddButton({
+TutTab:AddButton({
 	Name = "idk",
 	Callback = function()
-      		print("p")
+      		print("noclip")
   	end    
 })
 
