@@ -1,36 +1,46 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "viruspet", HidePremium = false, introtext = "p", SaveConfig = true, ConfigFolder = "viruspet"})
+local Window = OrionLib:MakeWindow({Name = "mm2 aufa", HidePremium = false, introtext = "p", SaveConfig = true, ConfigFolder = "mm2aufa"})
 
 OrionLib:MakeNotification({
 	Name = "hey",
-	Content = "dont forget to like and subcribe",
+	Content = "tayo",
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
 
 
 local TutTab = Window:MakeTab({
-	Name = "virus pet",
+	Name = "mm2aufa",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
 local Section = TutTab:AddSection({
-	Name = "viruspet Section"
+	Name = "mm2 Section"
 })
 
-TutTab:AddButton({
-	Name = "scampet",
-	Callback = function()
-      		print("fly")
-  	end    
+TutTab:AddToggle({
+	Name = "esp",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
 })
 
-TutTab:AddButton({
-	Name = "idk",
-	Callback = function()
-      		print("noclip")
-  	end    
+TutTab:AddToggle({
+	Name = "fly",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+TutTab:AddToggle({
+	Name = "noclip",
+	Default = https://raw.githubusercontent.com/aufa0607/p/main/p,
+	Callback = function(Value)
+		print(Value)
+	end    
 })
 
 OrionLib:Init()
