@@ -19,14 +19,14 @@ local Section = TutTab:AddSection({
 	Name = "script section"
 })
 
-Tab:AddButton({
+TutTab:AddButton({
 	Name = "antilag",
 	Callback = function()
       		print("suscribe")
   	end    
 })
 
-Tab:AddToggle({
+TutTab:AddToggle({
 	Name = "noclip",
 	Default = false,
 	Callback = function(Value)
@@ -34,7 +34,7 @@ Tab:AddToggle({
 	end    
 })
 
-Tab:AddToggle({
+TutTab:AddToggle({
 	Name = "fly",
 	Default = false,
 	Callback = function(Value)
@@ -42,7 +42,7 @@ Tab:AddToggle({
 	end    
 })
 
-Tab:AddToggle({
+TutTab:AddToggle({
 	Name = "esp",
 	Default = false,
 	Callback = function(Value)
