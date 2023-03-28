@@ -37,9 +37,9 @@ TutTab:AddToggle({
 
 TutTab:AddToggle({
 	Name = "noclip",
-	Default = https://raw.githubusercontent.com/aufa0607/p/main/p,
+	Default = false,
 	Callback = function(Value)
-		print(Value)
+		print("loadstring(game:HttpGet(("https://raw.githubusercontent.com/aufa0607/p/main/aufa"), true))()")
 	end    
 })
 
