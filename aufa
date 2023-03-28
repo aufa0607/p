@@ -26,29 +26,28 @@ TutTab:AddButton({
   	end    
 })
 
-TutTab:AddToggle({
+TutTab:AddButton({
 	Name = "noclip",
-	Default = false,
 	Callback = function(Value)
-		print(Value)
+      		print("suscribe")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/p"))();
-	end    
+  	end    
 })
 
-TutTab:AddToggle({
+TutTab:AddButton({
 	Name = "fly",
-	Default = false,
 	Callback = function(Value)
-		print(Value)
-	end    
+      		print("suscribe")
+loadstring(game:HttpGet(("https://pastebin.com/raw/nvDa9tQM"),true))();
+  	end    
 })
 
-TutTab:AddToggle({
+TutTab:AddButton({
 	Name = "esp",
-	Default = false,
 	Callback = function(Value)
-		print(Value)
-	end    
+      		print("suscribe")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/u"))();
+  	end    
 })
 
 OrionLib:Init()
