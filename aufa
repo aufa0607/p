@@ -1,0 +1,36 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "viruspet", HidePremium = false, introtext = "p", SaveConfig = true, ConfigFolder = "viruspet"})
+
+OrionLib:MakeNotification({
+	Name = "hey",
+	Content = "dont forget to like and subcribe",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+
+local TutTab = Window:MakeTab({
+	Name = "virus pet",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = TutTab:AddSection({
+	Name = "viruspet Section"
+})
+
+Tab:AddButton({
+	Name = "scampet",
+	Callback = function()
+      		print("suscribe")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "idk",
+	Callback = function()
+      		print("p")
+  	end    
+})
+
+OrionLib:Init()
