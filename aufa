@@ -1,33 +1,40 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "mm2aufa", HidePremium = false, introtext = "p", SaveConfig = true, ConfigFolder = "mm2aufa"})
+local Window = OrionLib:MakeWindow({Name = "murdermystery", HidePremium = false, IntroText = "aufa", SaveConfig = true, ConfigFolder = "murdermystery"})
 
 OrionLib:MakeNotification({
 	Name = "hey",
-	Content = "tayo",
+	Content = "dont forget to subcribe",
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
 
 
 local TutTab = Window:MakeTab({
-	Name = "mm2aufa",
+	Name = "main",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
 local Section = TutTab:AddSection({
-	Name = "mm2 Section"
+	Name = "script section"
 })
 
-TutTab:AddToggle({
-	Name = "esp",
+Tab:AddButton({
+	Name = "antilag",
+	Callback = function()
+      		print("suscribe")
+  	end    
+})
+
+Tab:AddToggle({
+	Name = "noclip",
 	Default = false,
 	Callback = function(Value)
-		print(Value)
+		print(suscribe)
 	end    
 })
 
-TutTab:AddToggle({
+Tab:AddToggle({
 	Name = "fly",
 	Default = false,
 	Callback = function(Value)
@@ -35,11 +42,11 @@ TutTab:AddToggle({
 	end    
 })
 
-TutTab:AddToggle({
-	Name = "noclip",
+Tab:AddToggle({
+	Name = "esp",
 	Default = false,
 	Callback = function(Value)
-		print("loadstring(game:HttpGet(("https://raw.githubusercontent.com/aufa0607/p/main/aufa"), true))()")
+		print(Value)
 	end    
 })
 
