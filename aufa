@@ -43,22 +43,42 @@ loadstring(game:HttpGet(("https://pastebin.com/raw/nvDa9tQM"),true))();
 })
 
 
-local VisTab = Window:MakeTab({
+local TutTab = Window:MakeTab({
 	Name = "visual",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
-local Section = VisTab:AddSection({
+local Section = TutTab:AddSection({
 	Name = "visual section"
 })
 
-VisTab:AddButton({
+TutTab:AddButton({
 	Name = "esp",
 	Callback = function(Value)
       		print("suscribe")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Ihaveash0rtnamefordiscord/Releases/main/MurderMystery2HighlightESP"))();
   	end    
+})
+
+
+local PetTab = Window:MakeTab({
+	Name = "petsimx",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = PetTab:AddSection({
+	Name = "script section"
+})
+
+PetTab:AddToggle({
+	Name = "scampet",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+loadstring(game:HttpGetAsync("https://bloxscripts.fun/scripts/d525a95bd4.lua", true))()
+	end    
 })
 
 OrionLib:Init()
