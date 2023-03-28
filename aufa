@@ -29,8 +29,8 @@ TutTab:AddButton({
 TutTab:AddToggle({
 	Name = "noclip",
 	Default = false,
-	Callback = function(Value)
-		print(suscribe)
+	Callback = function(loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/p"))();)
+		print(Value)
 	end    
 })
 
