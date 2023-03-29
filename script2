@@ -1,0 +1,164 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "scriptaufa", HidePremium = false, IntroText = "aufa", SaveConfig = true, ConfigFolder = "scriptaufa"})
+
+OrionLib:MakeNotification({
+	Name = "hey",
+	Content = "dont forget to subcribe",
+	Image = "rbxassetid://4483345998",
+	Time = 10
+
+local TutTab = Window:MakeTab({
+	Name = "main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = TutTab:AddSection({
+	Name = "script section"
+})
+
+TutTab:AddButton({
+	Name = "antilag",
+	Callback = function(Value)
+      		print("suscribe")
+  	end    
+  })
+
+TutTab:AddButton({
+	Name = "noclip",
+	Callback = function(Value)
+      		print("suscribe")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/p"))();
+  	end    
+})
+
+TutTab:AddButton({
+	Name = "fly",
+	Callback = function(Value)
+      		print("suscribe")
+loadstring(game:HttpGet(("https://pastebin.com/raw/nvDa9tQM"),true))();
+  	end    
+})
+
+TutTab:AddButton({
+	Name = "high speed",
+	Callback = function(Value)
+      		print("suscribe")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/speed1"))();
+  	end    
+})
+
+TutTab:AddButton({
+	Name = "normal speed",
+	Callback = function(Value)
+      		print("suscribe")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/speed2"))();
+  	end    
+})
+
+local Section = TutTab:AddSection({
+	Name = "dont touch pls"
+})
+
+TutTab:AddButton({
+	Name = "pls no touch",
+	Callback = function(Value)
+      		print("suscribe")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Edg..."))();
+  	end    
+})
+
+
+local VisTab = Window:MakeTab({
+	Name = "murdermystery",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = VisTab:AddSection({
+	Name = "visual section"
+})
+
+VisTab:AddButton({
+	Name = "esp",
+	Callback = function(Value)
+      		print("suscribe")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Ihaveash0rtnamefordiscord/Releases/main/MurderMystery2HighlightESP"))();
+  	end    
+})
+
+
+local PetTab = Window:MakeTab({
+	Name = "petsimx",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = PetTab:AddSection({
+	Name = "script section"
+})
+
+PetTab:AddToggle({
+	Name = "comingsoon",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+
+local BloTab = Window:MakeTab({
+	Name = "bloxfruit",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = BloTab:AddSection({
+	Name = "script section"
+})
+
+BloTab:AddButton({
+	Name = "comingsoon",
+	Callback = function(Value)
+      		print("suscribe")
+  	end    
+})
+
+local DooTab = Window:MakeTab({
+	Name = "doors",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = DooTab:AddSection({
+	Name = "esp section"
+})
+
+DooTab:AddToggle({
+	Name = "esp key",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/esp2"))();
+	end    
+})
+
+
+local MyrTab = Window:MakeTab({
+	Name = "myrestaurant",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = MyrTab:AddSection({
+	Name = "script section"
+})
+
+MyrTab:AddButton({
+	Name = "comingsoon",
+	Callback = function(Value)
+      		print("suscribe")
+  	end    
+})
+
+OrionLib:Init()
