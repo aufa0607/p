@@ -1,5 +1,6 @@
+
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "murdermystery", HidePremium = false, IntroText = "aufa", SaveConfig = true, ConfigFolder = "murdermystery"})
+local Window = OrionLib:MakeWindow({Name = "scriptaufa", HidePremium = false, IntroText = "aufa", SaveConfig = true, ConfigFolder = "scriptaufa"})
 
 OrionLib:MakeNotification({
 	Name = "hey",
@@ -44,7 +45,7 @@ loadstring(game:HttpGet(("https://pastebin.com/raw/nvDa9tQM"),true))();
 
 
 local VisTab = Window:MakeTab({
-	Name = "visual",
+	Name = "murdermystery",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -73,11 +74,47 @@ local Section = PetTab:AddSection({
 })
 
 PetTab:AddToggle({
-	Name = "scampet",
+	Name = "comingsoon",
 	Default = false,
 	Callback = function(Value)
 		print(Value)
-loadstring(game:HttpGetAsync("https://bloxscripts.fun/scripts/d525a95bd4.lua", true))()
+	end    
+})
+
+
+local BloTab = Window:MakeTab({
+	Name = "bloxfruit",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = BloTab:AddSection({
+	Name = "script section"
+})
+
+BloTab:AddButton({
+	Name = "comingsoon",
+	Callback = function(Value)
+      		print("suscribe")
+  	end    
+})
+
+local DooTab = dow:MakeTab({
+	Name = "doors",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = DooTab:AddSection({
+	Name = "esp section"
+})
+
+DooTab:AddToggle({
+	Name = "esp key",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/esp"))();
 	end    
 })
 
