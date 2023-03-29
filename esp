@@ -9,7 +9,7 @@ ESP:Toggle(true)
  
 -- object
 ESP:AddObjectListener(Workspace, {
-    Name = "gen_1",
+    Name = "item_1",
     CustomName = "key",
     Color = Color3.fromRGB(0, 250, 0), 
     IsEnabled = "whatever"
