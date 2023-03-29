@@ -1,0 +1,17 @@
+-- loadstring
+local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
+ 
+-- config
+ESP.Players = false
+ESP.Boxes = false
+ESP.Names = true
+ESP:Toggle(true)
+ 
+-- object
+ESP:AddObjectListener(Workspace,CurrentRooms.0.assets { 
+    Name = "KeyObtain", 
+    CustomName = "key",
+    Color = Color3.fromRGB(0, 250, 0), 
+    IsEnabled = "whatever"
+})
+ESP.whatever = true
