@@ -98,4 +98,23 @@ BloTab:AddButton({
   	end    
 })
 
+local DooTab = dow:MakeTab({
+	Name = "doors",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = DooTab:AddSection({
+	Name = "esp section"
+})
+
+DooTab:AddToggle({
+	Name = "esp chest",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/esp"))();
+	end    
+})
+
 OrionLib:Init()
