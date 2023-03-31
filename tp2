@@ -1,0 +1,9 @@
+local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+local p2 = "alunajkjk"
+local pos = p1.CFrame
+
+p1.CFrame = game.Players[p2].Character.HumanoidRootPart.CFrame
+
+wait(5)
+
+p1.CFrame = pos
