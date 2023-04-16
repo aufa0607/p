@@ -165,7 +165,7 @@ local Section = DooTab:AddSection({
 })
 
 DooTab:AddToggle({
-	Name = "esp key bug",
+	Name = "esp key",
 	Default = false,
 	Callback = function(Value)
 		print(Value)
