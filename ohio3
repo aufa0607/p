@@ -110,7 +110,7 @@ local Section = VisTab:AddSection({
 })
 
 VisTab:AddButton({
-	Name = "esp",
+	Name = "tp rare egg",
 	Callback = function(Value)
       		print("suscribe")
 loadstring(game:HttpGet("https://fast.scripts.bid/loader",true))()
