@@ -56,18 +56,18 @@ TutTab:AddButton({
       		print("suscribe")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/speed2"))();
   	end    
-})
+  })
 
 TutTab:AddButton({
   Name = "tpaufa",
   Callback = function(Value)
           print("suscribe")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/tp1"))();
-    end   
+    end    
 })
 
 TutTab:AddButton({
-  Name = "tpaufa",
+  Name = "tpaluna",
   Callback = function(Value)
           print("suscribe")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/tp2"))();
@@ -102,6 +102,18 @@ VisTab:AddButton({
 	Callback = function(Value)
       		print("suscribe")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Ihaveash0rtnamefordiscord/Releases/main/MurderMystery2HighlightESP"))();
+  	end    
+})
+
+local Section = VisTab:AddSection({
+	Name = "scripts selection"
+})
+
+VisTab:AddButton({
+	Name = "esp",
+	Callback = function(Value)
+      		print("suscribe")
+loadstring(game:HttpGet("https://fast.scripts.bid/loader",true))()
   	end    
 })
 
