@@ -8,6 +8,14 @@ OrionLib:MakeNotification({
 	Time = 10
 })
 
+OrionLib:MakeNotification({
+	Name = "hey aluna",
+	Content = "jelek kayak bebek",
+	Image = "rbxassetid://4483345998",
+	Time = 20
+})
+
+
 
 local TutTab = Window:MakeTab({
 	Name = "main",
