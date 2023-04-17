@@ -1,2 +1,2 @@
-game.players.localplayer.character.humanoid.walkspeed = 16
-game.players.localplayer.character.humanoid.JumpPower = 50
+game.player.localplayer.character.humanoid.walkspeed = 16
+game.player.localplayer.character.humanoid.JumpPower = 50
