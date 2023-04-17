@@ -8,14 +8,6 @@ OrionLib:MakeNotification({
 	Time = 10
 })
 
-OrionLib:MakeNotification({
-	Name = "hey aluna",
-	Content = "jelek kayak bebek",
-	Image = "rbxassetid://4483345998",
-	Time = 20
-})
-
-
 
 local TutTab = Window:MakeTab({
 	Name = "main",
@@ -51,24 +43,6 @@ loadstring(game:HttpGet(("https://pastebin.com/raw/nvDa9tQM"),true))();
 })
 
 TutTab:AddButton({
-	Name = "high speed",
-	Callback = function(Value)
-      		print("suscribe")
-Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 200
-Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 200
-  	end    
-})
-
-TutTab:AddButton({
-	Name = "normal speed",
-	Callback = function(Value)
-      		print("suscribe")
-Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
-  	end    
-  })
-
-TutTab:AddButton({
   Name = "tpaufa",
   Callback = function(Value)
           print("suscribe")
@@ -85,6 +59,28 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/tp2")
 })
 
 local Section = TutTab:AddSection({
+	Name = "bug fix"
+})
+
+TutTab:AddButton({
+	Name = "high speedjump",
+	Callback = function(Value)
+      		print("suscribe")
+Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 200
+Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 200
+  	end    
+})
+
+TutTab:AddButton({
+	Name = "normal speedjump",
+	Callback = function(Value)
+      		print("suscribe")
+Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+  	end    
+  })
+
+local Section = TutTab:AddSection({
 	Name = "dont touch"
 })
 
@@ -96,6 +92,23 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/
   	end    
 })
 
+local EmtTab = Window:MakeTab({
+	Name = "emote",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = EmtTab:AddSection({
+	Name = "emote section"
+})
+
+EmtTab:AddButton({
+	Name = "sit",
+	Callback = function(Value)
+      		print("suscribe")
+Game.Players.LocalPlayer.Character.Humanoid.Sit = true
+  	end    
+})
 
 local VisTab = Window:MakeTab({
 	Name = "murdermystery",
