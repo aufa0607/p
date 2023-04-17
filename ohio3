@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "scriptaufa", HidePremium = false, IntroText = "aufa", SaveConfig = true, ConfigFolder = "scriptaufa"})
+local Window = OrionLib:MakeWindow({Name = "aufa v1.1", HidePremium = false, IntroText = "aufa aluna alisha", SaveConfig = true, ConfigFolder = "aufa v1.1"})
 
 OrionLib:MakeNotification({
 	Name = "hey",
