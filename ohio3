@@ -54,7 +54,8 @@ TutTab:AddButton({
 	Name = "high speed",
 	Callback = function(Value)
       		print("suscribe")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/speed1"))();
+Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 200
+Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 200
   	end    
 })
 
@@ -62,7 +63,8 @@ TutTab:AddButton({
 	Name = "normal speed",
 	Callback = function(Value)
       		print("suscribe")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/speed2"))();
+Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
   	end    
   })
 
