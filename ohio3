@@ -1,199 +1,34 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "aufa v1.1", HidePremium = false, IntroText = "aufa aluna alisha", SaveConfig = true, ConfigFolder = "aufa v1.1"})
+local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
-OrionLib:MakeNotification({
-	Name = "hey",
-	Content = "dont forget to subcribe",
-	Image = "rbxassetid://4483345998",
-	Time = 10
-})
+getgenv().TPPlayer = "string"
 
 
-local TutTab = Window:MakeTab({
-	Name = "main",
+local TesTab = Window:MakeTab({
+	Name = "key",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
-local Section = TutTab:AddSection({
-	Name = "script section"
+local Section = TesTab:AddSection({
+	Name = "enter WaDGH0okl"
 })
 
-TutTab:AddButton({
-	Name = "antilag",
+Tab:AddTextbox({
+	Name = "key input",
+	Default = "",
+	TextDisappear = true,
 	Callback = function(Value)
-      		print("suscribe")
+      getgenv().TPPlayer = Value
+	end	  
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+if getgenv().TPPlayer == "WaDGH0okl" then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/ohio4"))();
+else print(Value)
+      end
   	end    
 })
-
-TutTab:AddButton({
-	Name = "noclip",
-	Callback = function(Value)
-      		print("suscribe")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/p"))();
-  	end    
-})
-
-TutTab:AddButton({
-	Name = "fly",
-	Callback = function(Value)
-      		print("suscribe")
-loadstring(game:HttpGet(("https://pastebin.com/raw/nvDa9tQM"),true))();
-  	end    
-})
-
-TutTab:AddButton({
-  Name = "tpaufa",
-  Callback = function(Value)
-          print("suscribe")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/tp1"))();
-    end    
-})
-
-TutTab:AddButton({
-  Name = "tpaluna",
-  Callback = function(Value)
-          print("suscribe")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/tp2"))();
-    end   
-})
-
-local Section = TutTab:AddSection({
-	Name = "bug fix"
-})
-
-TutTab:AddButton({
-	Name = "high speedjump",
-	Callback = function(Value)
-      		print("suscribe")
-Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 200
-Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 200
-  	end    
-})
-
-TutTab:AddButton({
-	Name = "normal speedjump",
-	Callback = function(Value)
-      		print("suscribe")
-Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
-  	end    
-  })
-
-local Section = TutTab:AddSection({
-	Name = "dont touch"
-})
-
-TutTab:AddButton({
-	Name = "pls no touch",
-	Callback = function(Value)
-      		print("suscribe")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))();
-  	end    
-})
-
-local EmtTab = Window:MakeTab({
-	Name = "emote",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-local Section = EmtTab:AddSection({
-	Name = "emote section"
-})
-
-EmtTab:AddButton({
-	Name = "sit",
-	Callback = function(Value)
-      		print("suscribe")
-Game.Players.LocalPlayer.Character.Humanoid.Sit = true
-  	end    
-})
-
-local VisTab = Window:MakeTab({
-	Name = "murdermystery",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-local Section = VisTab:AddSection({
-	Name = "visual section"
-})
-
-VisTab:AddButton({
-	Name = "esp",
-	Callback = function(Value)
-      		print("suscribe")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Ihaveash0rtnamefordiscord/Releases/main/MurderMystery2HighlightESP"))();
-  	end    
-})
-
-local Section = VisTab:AddSection({
-	Name = "scripts selection"
-})
-
-VisTab:AddButton({
-	Name = "tp rare egg",
-	Callback = function(Value)
-      		print("suscribe")
-loadstring(game:HttpGet("https://fast.scripts.bid/loader",true))()
-  	end    
-})
-
-
-local PetTab = Window:MakeTab({
-	Name = "petsimx",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-local Section = PetTab:AddSection({
-	Name = "script section"
-})
-
-PetTab:AddToggle({
-	Name = "comingsoon",
-	Default = false,
-	Callback = function(Value)
-		print(Value)
-	end    
-})
-
-
-local BloTab = Window:MakeTab({
-	Name = "bloxfruit",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-local Section = BloTab:AddSection({
-	Name = "script section"
-})
-
-BloTab:AddButton({
-	Name = "comingsoon",
-	Callback = function(Value)
-      		print("suscribe")
-  	end    
-})
-
-local DooTab = Window:MakeTab({
-	Name = "doors",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-local Section = DooTab:AddSection({
-	Name = "esp section"
-})
-
-DooTab:AddToggle({
-	Name = "esp key",
-	Default = false,
-	Callback = function(Value)
-		print(Value)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/esp"))();
-	end    
-})
-
-OrionLib:Init()
