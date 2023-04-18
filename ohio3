@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "key input", HidePremium = false, SaveConfig = true, ConfigFolder = "key input"})
+local Window = OrionLib:MakeWindow({Name = "keyinput", HidePremium = false, SaveConfig = true, ConfigFolder = "key input"})
 
 getgenv().TPPlayer = "string"
 
