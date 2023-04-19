@@ -15,13 +15,6 @@ local Section = TutTab:AddSection({
 })
 
 TutTab:AddButton({
-	Name = "antilag",
-	Callback = function(Value)
-      		print("suscribe")
-  	end    
-})
-
-TutTab:AddButton({
 	Name = "noclip",
 	Callback = function(Value)
       		print("suscribe")
