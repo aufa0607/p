@@ -55,7 +55,7 @@ TutTab:AddDropdown({
 	Default = "normal",
 	Options = {"normal", "high"},
 	Callback = function(Value)
-      getgenv().SPPlayer = Value
+      getgenv().TPPlayer = Value
 	end    
 })
 
