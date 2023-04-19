@@ -1,7 +1,7 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "aufa v1.2", HidePremium = false, i IntroText = "aufa aluna alisha", SaveConfig = true, ConfigFolder = "aufa v1.2"})
 
-getgenv().SPPlayer = "string"
+getgenv().TPPlayer = "string"
 
 
 local TutTab = Window:MakeTab({
@@ -69,10 +69,10 @@ TutTab:AddDropdown({
 TutTab:AddButton({
 	Name = "button",
 	Callback = function()
-if getgenv().SPPlayer == "normal" then
+if getgenv().TPPlayer == "normal" then
 Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
 Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
-elseif getgenv().SPPlayer == "high" then
+elseif getgenv().TPPlayer == "high" then
 Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 200
 Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 200
       end
