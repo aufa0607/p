@@ -11,7 +11,7 @@ local TesTab = Window:MakeTab({
 })
 
 local Section = TesTab:AddSection({
-	Name = "enter alunaalisah"
+	Name = "enter key"
 })
 
 TesTab:AddTextbox({
