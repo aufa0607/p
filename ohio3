@@ -11,7 +11,7 @@ local TesTab = Window:MakeTab({
 })
 
 local Section = TesTab:AddSection({
-	Name = "enter WaDGH0okl"
+	Name = "enter alunaalisah"
 })
 
 TesTab:AddTextbox({
@@ -26,7 +26,7 @@ TesTab:AddTextbox({
 TesTab:AddButton({
 	Name = "enter key",
 	Callback = function()
-if getgenv().TPPlayer == "WaDGH0okl" then
+if getgenv().TPPlayer == "alunaalisah" then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/ohio4"))();
 else print(Value)
       end
