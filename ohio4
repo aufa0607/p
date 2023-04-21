@@ -1,5 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "aufa v1.2", HidePremium = false, IntroText = "aufa aluna alisha", SaveConfig = true, ConfigFolder = "aufa v1.2"})
+local Window = OrionLib:MakeWindow({Name = "aufa v1.2", HidePremium = false, 
+IntroText = "aufa aluna alisha", SaveConfig = true, ConfigFolder = "aufa v1.2"})
 
 getgenv().TPPlayer = "string"
 
@@ -12,6 +13,13 @@ local TutTab = Window:MakeTab({
 
 local Section = TutTab:AddSection({
 	Name = "script section"
+})
+
+TutTab:AddButton({
+	Name = "antilag",
+	Callback = function(Value)
+      		print("suscribe")
+  	end    
 })
 
 TutTab:AddButton({
@@ -51,9 +59,9 @@ local Section = TutTab:AddSection({
 })
 
 TutTab:AddDropdown({
-	Name = "speed and jump",
-	Default = "normal",
-	Options = {"normal", "high"},
+	Name = "power jump and speed",
+	Default = "normal power",
+	Options = {"super low power", "slow power", "low power", "normal power", "low high power", "power", "high power", "super high power"},
 	Callback = function(Value)
       getgenv().TPPlayer = Value
 	end    
@@ -62,14 +70,35 @@ TutTab:AddDropdown({
 TutTab:AddButton({
 	Name = "button",
 	Callback = function()
-if getgenv().TPPlayer == "normal" then
-Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
-elseif getgenv().TPPlayer == "high" then
-Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 200
-Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 200
+if getgenv().TPPlayer == "super low power" then
+Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 1
+Game.Players.LocalPlayer.Character.Humanoid.Jumppower = 5
+elseif getgenv().TPPlayer == "slow power" then
+Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 5
+Game.Players.LocalPlayer.Character.Humanoid.Jumppower = 10
       end
-  	end    
+if getgenv().TPPlayer == "low power" then
+Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 12
+Game.Players.LocalPlayer.Character.Humanoid.Jumppower = 30
+elseif getgenv().TPPlayer == "normal power" then
+Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+Game.Players.LocalPlayer.Character.Humanoid.Jumppower = 50
+      end
+if getgenv().TPPlayer == "low high power" then
+Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 18
+Game.Players.LocalPlayer.Character.Humanoid.Jumppower = 70
+elseif getgenv().TPPlayer == "power" then
+Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 25
+Game.Players.LocalPlayer.Character.Humanoid.Jumppower = 100
+      end
+if getgenv().TPPlayer == "high power" then
+Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+Game.Players.LocalPlayer.Character.Humanoid.Jumppower = 250
+elseif getgenv().TPPlayer == "super high power" then
+Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 200
+Game.Players.LocalPlayer.Character.Humanoid.Jumppower = 500
+      end
+    end
 })
 
 local Section = TutTab:AddSection({
