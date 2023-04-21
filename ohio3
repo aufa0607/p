@@ -14,7 +14,7 @@ local Section = TesTab:AddSection({
 	Name = "enter WaDGH0okl"
 })
 
-Tab:AddTextbox({
+TesTab:AddTextbox({
 	Name = "key input",
 	Default = "",
 	TextDisappear = true,
@@ -23,7 +23,7 @@ Tab:AddTextbox({
 	end	  
 })
 
-Tab:AddButton({
+TesTab:AddButton({
 	Name = "Button!",
 	Callback = function()
 if getgenv().TPPlayer == "WaDGH0okl" then
