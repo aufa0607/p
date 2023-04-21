@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "aufa v1.2", HidePremium = false, 
+local Window = OrionLib:MakeWindow({Name = "aufa v1.3", HidePremium = false, 
 IntroText = "aufa aluna alisha", SaveConfig = true, ConfigFolder = "aufa v1.2"})
 
 getgenv().TPPlayer = "string"
