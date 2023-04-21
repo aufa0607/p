@@ -26,7 +26,7 @@ TesTab:AddTextbox({
 TesTab:AddButton({
 	Name = "enter",
 	Callback = function()
-if getgenv().TPPlayer == "WaDGH0okl" then
+if getgenv().TPPlayer == "qwerty" then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/ohio4"))();
 elseif getgenv().TPPlayer == "ghjk" then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/speed%20city"))();
