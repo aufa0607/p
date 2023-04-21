@@ -1,0 +1,192 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Speed City Farming 2.0", "BloodTheme")
+local Tab1 = Window:NewTab("Ghost City")
+local Tab3 = Window:NewTab("Trillionaire City")
+local Tab2 = Window:NewTab("Misc")
+local Tab4 = Window:NewTab("Credits")
+local Section4 = Tab1:NewSection("Orb Farm")
+local Section5 = Tab1:NewSection("Crate Farm")
+local Section6 = Tab1:NewSection("Required Achievement Crate Farm")
+local Section8 = Tab2:NewSection("Teleports")
+local Section9 = Tab2:NewSection("Extra")
+local Section10 = Tab3:NewSection("Farming (Section created for Caleb Gray on Youtube)")
+local Section11 = Tab4:NewSection("xHeptc - most of scripting + UI")
+local Section12 = Tab4:NewSection("Counter#2747 - scripted brand new features")
+Section10:NewLabel("You must have Trillionaire City unlocked.")
+ 
+ 
+Section9:NewButton("Claim Cloud Trail", "TP to Cloud Trail", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3, 659, 0)
+end)
+ 
+ 
+Section4:NewToggle("White Orbs", "Teleports You To The White Orbs", function(state)
+if state then
+getgenv().Farming1 = true
+		while Farming1 == true do
+            if game:GetService("Workspace").GhostCity.GhostOrbsMega:FindFirstChild("GhostMega") then 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").GhostCity.GhostOrbsMega.GhostMega.Outside.Position)
+end
+			wait()
+		end
+else
+getgenv().Farming1 = false
+end
+end)
+ 
+Section4:NewToggle("Black Orbs", "Teleports You To The Black Orbs", function(state)
+if state then
+getgenv().Farming1 = true
+		while Farming1 == true do
+            if game:GetService("Workspace").GhostCity.GhostOrbsMega:FindFirstChild("GhostMega2") then 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").GhostCity.GhostOrbsMega.GhostMega2.Outside.Position)
+end
+			wait()
+		end
+else
+getgenv().Farming1 = false
+end
+end)
+ 
+Section6:NewToggle("Happy Ghost", "Teleports You To The Happy Ghost Crate", function(state)
+if state then
+getgenv().Farming1 = true
+		while Farming1 == true do
+            if game:GetService("Workspace").GhostCity.GhostOrbsMega:FindFirstChild("Happy") then 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").GhostCity.GhostOrbsMega.Happy.Crate.Position)
+end
+			wait()
+		end
+else
+getgenv().Farming1 = false
+end
+end)
+ 
+ 
+Section6:NewToggle("King Ghost", "Teleports You To The King Ghost Crate", function(state)
+if state then
+getgenv().Farming1 = true
+		while Farming1 == true do
+            if game:GetService("Workspace").GhostCity.GhostOrbsMega:FindFirstChild("King Ghost") then 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").GhostCity.GhostOrbsMega["King Ghost"].Crate.Position)
+end
+			wait()
+		end
+else
+getgenv().Farming1 = false
+end
+end)
+ 
+Section5:NewToggle("Sad Ghost", "Teleports You To The Happy Ghost Crate", function(state)
+if state then
+getgenv().Farming1 = true
+		while Farming1 == true do
+            if game:GetService("Workspace").GhostCity.GhostOrbsMega:FindFirstChild("Sad") then 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").GhostCity.GhostOrbsMega["Sad"].Crate.Position)
+end
+			wait()
+		end
+else
+getgenv().Farming1 = false
+end
+end)
+ 
+Section5:NewToggle("Angry Ghost", "Teleports You To The Angry Ghost Crate", function(state)
+if state then
+getgenv().Farming1 = true
+		while Farming1 == true do
+            if game:GetService("Workspace").GhostCity.GhostOrbsMega:FindFirstChild("Angry") then 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").GhostCity.GhostOrbsMega["Angry"].Crate.Position)
+end
+			wait()
+		end
+else
+getgenv().Farming1 = false
+end
+end)
+ 
+ 
+ 
+Section5:NewToggle("Scared Ghost", "Teleports You To The Happy Ghost Crate", function(state)
+if state then
+getgenv().Farming1 = true
+		while Farming1 == true do
+            if game:GetService("Workspace").GhostCity.GhostOrbsMega:FindFirstChild("Scared") then 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").GhostCity.GhostOrbsMega["Scared"].Crate.Position)
+end
+			wait()
+		end
+else
+getgenv().Farming1 = false
+end
+end)
+ 
+Section5:NewToggle("Surprised Ghost", "Teleports You To The Happy Ghost Crate", function(state)
+if state then
+getgenv().Farming1 = true
+		while Farming1 == true do
+            if game:GetService("Workspace").GhostCity.GhostOrbsMega:FindFirstChild("Surprised") then 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").GhostCity.GhostOrbsMega["Surprised"].Crate.Position)
+end
+			wait()
+		end
+else
+getgenv().Farming1 = false
+end
+end)
+ 
+Section6:NewToggle("Zombie Ghost", "Teleports You To The Zombie Ghost Crate", function(state)
+if state then
+getgenv().Farming1 = true
+		while Farming1 == true do
+            if game:GetService("Workspace").GhostCity.GhostOrbsMega:FindFirstChild("Zombie Ghost") then 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").GhostCity.GhostOrbsMega["Zombie Ghost"].Crate.Position)
+end
+			wait()
+		end
+else
+getgenv().Farming1 = false
+end
+end)
+ 
+Section8:NewButton("Main Map", "Teleports You!", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, 30.9980049, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end)
+ 
+Section8:NewButton("Winter", "Teleports You!", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4680.05566, 1799.30164, -2813.43042, 0.998682499, 2.74817302e-09, -0.0513154939, -5.44843948e-09, 1, -5.24809955e-08, 0.0513154939, 5.26914405e-08, 0.998682499)
+end)
+ 
+Section8:NewButton("Original Map", "Teleports You!", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2388, 2742.4978, 390, 1, -2.66421161e-08, -1.13693065e-14, 2.66421161e-08, 1, 3.76773457e-08, 1.03655022e-14, -3.76773457e-08, 1)
+end)
+ 
+Section8:NewButton("Volcano", "Teleports You!", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1270, 258.594482, 2022, 1, 9.16371476e-08, -9.85315311e-15, -9.16371476e-08, 1, -3.53292471e-08, 6.61568138e-15, 3.53292471e-08, 1)
+end)
+ 
+Section8:NewButton("Beach", "Teleports You!", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3624.00562, 67.7395248, 1018.45709, 0.999986172, 3.45591729e-07, 0.00525691034, -3.44176954e-07, 1, -2.70028011e-07, -0.00525691034, 2.6821499e-07, 0.999986172)
+end)
+ 
+Section8:NewButton("Ghost City", "Teleports You!", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3825.7041, -33.801918, 7304.7002, 1, 4.6416046e-10, -4.94060366e-08, -4.64160321e-10, 1, 2.74975531e-09, 4.94060366e-08, -2.74975531e-09, 1)
+end)
+ 
+Section8:NewButton("TrillionaireCity", "Teleports You!", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1900, 99, 6270)
+end)
+ 
+Section10:NewToggle("Farm Orbs", "Teleports You To All Orbs", function(state)
+if state then
+getgenv().Farming1 = true
+		while Farming1 == true do
+            if game:GetService("Workspace").TrillionaireCity.TrillionaireOrbs:FindFirstChild("Trillionaire") then 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").TrillionaireCity.TrillionaireOrbs.Trillionaire.Outside.Position)
+end
+			wait()
+		end
+else
+getgenv().Farming1 = false
+end
+end)
