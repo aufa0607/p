@@ -11,10 +11,10 @@ local TesTab = Window:MakeTab({
 })
 
 local Section = TesTab:AddSection({
-	Name = "enter key"
+	Name = "enter WaDGH0okl"
 })
 
-TesTab:AddTextbox({
+Tab:AddTextbox({
 	Name = "key input",
 	Default = "",
 	TextDisappear = true,
@@ -23,13 +23,17 @@ TesTab:AddTextbox({
 	end	  
 })
 
-TesTab:AddButton({
-	Name = "enter key",
+Tab:AddButton({
+	Name = "Button!",
 	Callback = function()
-if getgenv().TPPlayer == "qwerty" then
+if getgenv().TPPlayer == "WaDGH0okl" then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/ohio4"))();
 elseif getgenv().TPPlayer == "ghjk" then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/speed%20city"))();
       end
-  	end    
+if getgenv().TPPlayer == "dfgh" then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/TheALLHACKLoader/main/NukeLoader"))()
+else print(Value)
+      end
+    end
 })
