@@ -24,7 +24,7 @@ TesTab:AddTextbox({
 })
 
 TesTab:AddButton({
-	Name = "Button!",
+	Name = "Button",
 	Callback = function()
 if getgenv().TPPlayer == "WaDGH0okl" then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/ohio4"))();
