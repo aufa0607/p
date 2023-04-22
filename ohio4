@@ -110,7 +110,7 @@ local Section = TutTab:AddSection({
 })
 
 TutTab:AddButton({
-	Name = "pls no touch",
+	Name = "infinitey yeld",
 	Callback = function(Value)
       		print("suscribe")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))();
