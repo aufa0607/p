@@ -61,7 +61,7 @@ local Section = TutTab:AddSection({
 TutTab:AddDropdown({
 	Name = "power jump and speed",
 	Default = "normal power",
-	Options = {"super low power", "slow power", "low power", "normal power", "low high power", "power", "high power", "super high power"},
+	Options = {"super low power", "slow power", "low power", "normal power", "low high power", "my faforite power", "power", "high power", "super high power"},
 	Callback = function(Value)
       getgenv().TPPlayer = Value
 	end    
@@ -87,14 +87,18 @@ Game.Players.LocalPlayer.Character.Humanoid.Jumppower = 50
 if getgenv().TPPlayer == "low high power" then
 Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 18
 Game.Players.LocalPlayer.Character.Humanoid.Jumppower = 70
-elseif getgenv().TPPlayer == "power" then
-Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 25
-Game.Players.LocalPlayer.Character.Humanoid.Jumppower = 100
+elseif getgenv().TPPlayer == "my faforite power" then
+Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 19
+Game.Players.LocalPlayer.Character.Humanoid.Jumppower = 50
       end
-if getgenv().TPPlayer == "high power" then
+if getgenv().TPPlayer == "power" then
+Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 70
+Game.Players.LocalPlayer.Character.Humanoid.Jumppower = 100
+elseif getgenv().TPPlayer == "high power" then
 Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
 Game.Players.LocalPlayer.Character.Humanoid.Jumppower = 250
-elseif getgenv().TPPlayer == "super high power" then
+      end
+if getgenv().TPPlayer == "super high power" then
 Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 200
 Game.Players.LocalPlayer.Character.Humanoid.Jumppower = 500
       end
