@@ -26,14 +26,15 @@ TesTab:AddTextbox({
 TesTab:AddButton({
 	Name = "enter",
 	Callback = function()
-if getgenv().TPPlayer == "qwerty" then
+if getgenv().TPPlayer == "script aufa" then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/ohio4"))();
-elseif getgenv().TPPlayer == "ghjk" then
+elseif getgenv().TPPlayer == "speed city script" then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/speed%20city"))();
       end
 if getgenv().TPPlayer == "dfgh" then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/TheALLHACKLoader/main/NukeLoader"))()
-else print(Value)
+elseif getgenv().TPPlayer == "infinity yeld" then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))();
       end
     end
 })
