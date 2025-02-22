@@ -1,0 +1,42 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Pilih script blox fruit", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+getgenv().TPPlayer = "string"
+
+
+local TesTab = Window:MakeTab({
+	Name = "nama script",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = TesTab:AddSection({
+	Name = "enter WaDGH0okl"
+
+		TesTab:AddDropdown({
+	Name = "pilihan script",
+	Default = "epik",
+	Options = {"epik","native"},
+	Callback = function(Value)
+      getgenv().TPPlayer = Value
+	end    
+})
+      getgenv().TPPlayer = Value
+	end	  
+})
+
+TesTab:AddButton({
+	Name = "Button!",
+	Callback = function()
+		if getgenv().TPPlayer == "epik" then
+			loadstring(game:HttpGet(('https://github.com/aufa0607/p/blob/main/Super%20epik')))()
+      end
+elseif getgenv().TPPlayer == "???" then
+???
+      end
+if getgenv().TPPlayer == "????" then
+???
+else print(Value)
+      end
+    end
+})
