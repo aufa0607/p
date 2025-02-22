@@ -31,12 +31,8 @@ TesTab:AddButton({
 		if getgenv().TPPlayer == "epik" then
 			loadstring(game:HttpGet(('https://github.com/aufa0607/p/blob/main/Super%20epik')))()
       end
-elseif getgenv().TPPlayer == "???" then
-???
+elseif getgenv().TPPlayer == "native" then
+script_key="sNTWlzoWUoTmgcIXkaXAKRGnWQGZPbYf";
+(loadstring or load)(game:HttpGet("https://raw.githubusercontent.com/Native-lab/Native/main/loader.lua"))()
       end
-if getgenv().TPPlayer == "????" then
-???
-else print(Value)
-      end
-    end
-})
+
