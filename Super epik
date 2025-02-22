@@ -1,0 +1,370 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "epik v1.6", HidePremium = false, 
+IntroText = "epikteam", SaveConfig = true, ConfigFolder = "epik v1.6"})
+
+getgenv().TPPlayer = "string"
+getgenv().SPPlace = "string"
+getgenv().LPPlace = "string"
+getgenv().KPPlace = "string"
+getgenv().HPPlace = "string"
+
+
+function teleport(teleportplace)
+  local player = game.Players.LocalPlayer
+  player.Character.HumanoidRootPart.CFrame = teleportplace
+end
+
+local TutTab = Window:MakeTab({
+	Name = "main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = TutTab:AddSection({
+	Name = "script section"
+})
+
+TutTab:AddButton({
+	Name = "noclip",
+	Callback = function(Value)
+      		print("suscribe")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/p"))();
+  	end    
+})
+
+TutTab:AddButton({
+	Name = "fly",
+	Callback = function(Value)
+      		print("suscribe")
+loadstring(game:HttpGet(("https://pastebin.com/raw/nvDa9tQM"),true))();
+  	end    
+})
+
+TutTab:AddButton({
+  Name = "tpaufa",
+  Callback = function(Value)
+          print("suscribe")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/tp1"))();
+    end    
+})
+
+TutTab:AddButton({
+  Name = "tpaluna",
+  Callback = function(Value)
+          print("suscribe")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/tp2"))();
+    end   
+})
+
+local Section = TutTab:AddSection({
+	Name = "speed and jump boost"
+})
+
+TutTab:AddDropdown({
+	Name = "power jump and speed",
+	Default = "normal power",
+	Options = {"super low power", "slow power", "low power", "normal power", "low high power", "my faforite power", "power", "high power", "super high power"},
+	Callback = function(Value)
+      getgenv().TPPlayer = Value
+	end    
+})
+
+TutTab:AddButton({
+	Name = "button",
+	Callback = function()
+if getgenv().TPPlayer == "super low power" then
+Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 1
+Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 5
+elseif getgenv().TPPlayer == "slow power" then
+Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 5
+Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 10
+      end
+if getgenv().TPPlayer == "low power" then
+Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 12
+Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 30
+elseif getgenv().TPPlayer == "normal power" then
+Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+      end
+if getgenv().TPPlayer == "low high power" then
+Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 18
+Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 70
+elseif getgenv().TPPlayer == "my faforite power" then
+Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 19
+Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 65
+      end
+if getgenv().TPPlayer == "power" then
+Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 70
+Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
+elseif getgenv().TPPlayer == "high power" then
+Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 250
+      end
+if getgenv().TPPlayer == "super high power" then
+Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 200
+Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 500
+      end
+    end
+})
+
+local Section = TutTab:AddSection({
+	Name = "infinity yeld"
+})
+
+TutTab:AddButton({
+	Name = "infinitey yeld",
+	Callback = function(Value)
+      		print("suscribe")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))();
+  	end    
+})
+
+local EmtTab = Window:MakeTab({
+	Name = "emote",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = EmtTab:AddSection({
+	Name = "emote section"
+})
+
+EmtTab:AddButton({
+	Name = "sit",
+	Callback = function(Value)
+      		print("suscribe")
+Game.Players.LocalPlayer.Character.Humanoid.Sit = true
+  	end    
+})
+
+EmtTab:AddButton({
+	Name = "maxhealth",
+	Callback = function(Value)
+      		print("suscribe")
+Game.Players.LocalPlayer.Character.Humanoid.Health = 100
+  	end    
+})
+
+local VisTab = Window:MakeTab({
+	Name = "murdermystery",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = VisTab:AddSection({
+	Name = "visual section"
+})
+
+VisTab:AddButton({
+	Name = "esp",
+	Callback = function(Value)
+      		print("suscribe")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Ihaveash0rtnamefordiscord/Releases/main/MurderMystery2HighlightESP"))();
+  	end    
+})
+
+local Section = VisTab:AddSection({
+	Name = "scripts selection"
+})
+
+local Section = VisTab:AddSection({
+	Name = "teleport"
+})
+
+VisTab:AddDropdown({
+	Name = "teleport MM2 #1",
+	Default = "lobby",
+	Options = {"lobby", "mil base(work in map mil base)", "biolab(work in map biolab)", "hotel(work in map hotel)", "nSOffice(work in map nSOffice)", "Rfacility(work in map Rfacility)", "mansion2(work in map mansion2)", "bank2(work in map bank2)"},
+	Callback = function(Value)
+      getgenv().SPPlace = Value
+	end    
+})
+
+VisTab:AddButton({
+	Name = "teleport button",
+	Callback = function(Value)
+if getgenv().SPPlace == "lobby" then
+teleport(game:GetService("Workspace").Lobby.Map.Fountain.Nikilis.Knife)
+elseif getgenv().SPPlace == "mil base(work in map mil base)" then
+teleport(game:GetService("Workspace").MilBase.Map.Part.CFrame)
+      end
+if getgenv().SPPlace == "biolab(work in map biolab)" then
+teleport(game:GetService("Workspace").BioLab.Map.Handle.CFrame)
+elseif getgenv().SPPlace == "hotel(work in map hotel)" then
+teleport(game:GetService("Workspace").Hotel.Map.Parts.Rooms.LargeSuite.Cabinet.Union.CFrame)
+			end
+if getgenv().SPPlace == "nSOffice(work in map nSOffice)" then
+teleport(game:GetService("Workspace").nSOffice.Map.Parts.Rooms.RecordingStudio.Props.Subcribe.Part.CFrame)
+elseif getgenv().SPPlace == "Rfacility(work in map Rfacility)" then
+teleport(game:GetService("Workspace").ResearchFacility.Parts.Chair.Block.CFrame)
+      end
+if getgenv().SPPlace == "mansion2(work in map mansion2)" then
+teleport(game:GetService("Workspace").Mansion2.Map.Union.CFrame)
+else print(Value)
+      end
+  	end    
+})
+
+local PetTab = Window:MakeTab({
+	Name = "petsimx",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = PetTab:AddSection({
+	Name = "script section"
+})
+
+PetTab:AddToggle({
+	Name = "comingsoon",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+
+local BloTab = Window:MakeTab({
+	Name = "bloxfruit",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = BloTab:AddSection({
+	Name = "script section"
+})
+
+BloTab:AddButton({
+	Name = "comingsoon",
+	Callback = function(Value)
+      		print("suscribe")
+  	end    
+})
+
+local SusTab = Window:MakeTab({
+	Name = "speedcity",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = SusTab:AddSection({
+	Name = "script section"
+})
+
+SusTab:AddDropdown({
+	Name = "teleport",
+	Default = "black mega orb",
+	Options = {"black mega orb", "white mega orb", "white mega trillion orb", "blue sea orb"},
+	Callback = function(Value)
+      getgenv().LPPlace = Value
+	end    
+})
+
+SusTab:AddButton({
+	Name = "teleport",
+	Callback = function(Value)
+if getgenv().LPPlace == "black mega orb" then
+while true do
+teleport(game:GetService("Workspace").GhostCity.GhostOrbsMega.GhostMega2.Outside.CFrame)
+wait(0)
+        end
+elseif getgenv().LPPlace == "white mega orb" then
+while true do
+teleport(game:GetService("Workspace").GhostCity.GhostOrbsMega.GhostMega.Outside.CFrame)
+wait(0)
+        end
+      end
+if getgenv().LPPlace == "white mega trillion orb" then
+while true do
+teleport(game:GetService("Workspace").TrillionaireCity.TrillionaireOrbs.Trillionaire.Outside.CFrame)
+wait(0)
+        end
+elseif getgenv().LPPlace == "blue sea orb" then
+while true do
+teleport(game:GetService("Workspace").BeachMap.BeachOrbs.Beach3.Outside.CFrame)
+wait(0)
+        end
+      end
+  	end    
+})
+
+local Section = SusTab:AddSection({
+	Name = "shop"
+})
+
+SusTab:AddButton({
+	Name = "golden unstable crate",
+	Callback = function(Value)
+local args = {
+    [1] = "Golden Unstable"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("BuyCrate"):FireServer(unpack(args))
+  	end    
+})
+
+SusTab:AddButton({
+	Name = "ocean crate",
+	Callback = function(Value)
+local args = {
+    [1] = "Ocean Crate"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("BuyCrate"):FireServer(unpack(args))
+  	end    
+})
+
+SusTab:AddButton({
+	Name = "pink crate",
+	Callback = function(Value)
+local args = {
+    [1] = "Pink Crate"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("BuyCrate"):FireServer(unpack(args))
+  	end    
+})
+
+SusTab:AddButton({
+	Name = "auto golden unstable crate",
+	Callback = function(Value)
+while true do
+local args = {
+    [1] = "Golden Unstable"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("BuyCrate"):FireServer(unpack(args))
+wait(0)
+      end
+  	end    
+})
+
+SusTab:AddButton({
+	Name = "auto ocean crate",
+	Callback = function(Value)
+while true do
+local args = {
+    [1] = "Ocean Crate"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("BuyCrate"):FireServer(unpack(args))
+wait(0)
+      end
+  	end    
+})
+
+SusTab:AddButton({
+	Name = "auto pink crate",
+	Callback = function(Value)
+while true do
+local args = {
+    [1] = "Pink Crate"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("BuyCrate"):FireServer(unpack(args))
+wait(0)
+      end
+  	end    
+})
+
+OrionLib:Init()
