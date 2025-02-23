@@ -32,3 +32,13 @@ local Window = Rayfield:CreateWindow({
       Key = {"botak"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
+
+local Tab = Window:CreateTab("🏠main", nil) -- Title, Image
+local Section = Tab:CreateSection("main")
+
+Rayfield:Notify({
+   Title = "look",
+   Content = "zidanbot",
+   Duration = 6.5,
+   Image = 4483362458,
+})
