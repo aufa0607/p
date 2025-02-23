@@ -47,10 +47,10 @@ local Slider = mainTab:CreateSlider({
    Name = "speed boost",
    Range = {0, 100},
    Increment = 10,
-   Suffix = "Bananas",
+   Suffix = "speed",
    CurrentValue = 10,
    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
-   Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
+   Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (value)
    end,
 })
