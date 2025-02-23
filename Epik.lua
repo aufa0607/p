@@ -43,7 +43,7 @@ Rayfield:Notify({
    Image = 4483362458,
 })
 
-local Slider = Tab:CreateSlider({
+local Slider = mainTab:CreateSlider({
    Name = "speed boost",
    Range = {0, 100},
    Increment = 10,
