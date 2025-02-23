@@ -35,7 +35,7 @@ local Window = Rayfield:CreateWindow({
 
 Rayfield:Notify({
    Title = "look",
-   Content = "zidan bot",
+   Content = "zidanbot",
    Duration = 6.5,
    Image = 4483362458,
 })
