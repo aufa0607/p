@@ -33,15 +33,15 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local Tab = Window:CreateTab("🏠main", nil) -- Title, Image
-local Section = Tab:CreateSection("main")
-
 Rayfield:Notify({
    Title = "look",
    Content = "zidanbot",
    Duration = 6.5,
    Image = 4483362458,
 })
+
+local Tab = Window:CreateTab("🏠main", nil) -- Title, Image
+local Section = Tab:CreateSection("main")
 
 local Slider = mainTab:CreateSlider({
    Name = "speed boost",
