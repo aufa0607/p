@@ -40,8 +40,8 @@ Rayfield:Notify({
    Image = 4483362458,
 })
 
-local Tab = Window:CreateTab("🏠main", nil) -- Title, Image
-local Section = Tab:CreateSection("main")
+local mainTab = Window:CreateTab("🏠main", nil) -- Title, Image
+local Section = mainTab:CreateSection("main")
 
 local Slider = mainTab:CreateSlider({
    Name = "speed boost",
