@@ -5,9 +5,7 @@ local Window = Rayfield:CreateWindow({
    LoadingTitle = "epik",
    LoadingSubtitle = "by aufa",
    Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
-
-   getgenv().TPPlayer = "string"
-
+      
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
 
@@ -35,6 +33,13 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
+getgenv().TPPlayer = "string"
+
+function teleport(teleportplace)
+  local player = game.Players.LocalPlayer
+  player.Character.HumanoidRootPart.CFrame = teleportplace
+end
+
 Rayfield:Notify({
    Title = "look",
    Content = "zidanbot",
@@ -57,51 +62,33 @@ local Slider = mainTab:CreateSlider({
    end,
 })
 
-local Dropdown = mainTab:CreateDropdown({
-   Name = "Dropdown Example",
-   Options = {"super low power", "slow power", "low power", "normal power", "low high power", "my faforite power", "power", "high power", "super high power"},
-   CurrentOption = {"normal power"},
-   MultipleOptions = false,
-   Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Options)
-   getgenv().TPPlayer = (Value)
+local Slider = mainTab:CreateSlider({
+   Name = "jump boost",
+   Range = {0, 300},
+   Increment = 1,
+   Suffix = "jump",
+   CurrentValue = 50,
+   Flag = "Slider2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+         game.Players.LocalPlayer.Character.Humanoid.JumpPower = (Value)
    end,
 })
 
-local Button = mainTab:CreateButton({
-   Name = "Button Example",
-   Callback = function()
-  if getgenv().TPPlayer == "super low power" then
-Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 1
-Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 5
-elseif getgenv().TPPlayer == "slow power" then
-Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 5
-Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 10
-      end
-if getgenv().TPPlayer == "low power" then
-Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 12
-Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 30
-elseif getgenv().TPPlayer == "normal power" then
-Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
-      end
-if getgenv().TPPlayer == "low high power" then
-Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 18
-Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 70
-elseif getgenv().TPPlayer == "my faforite power" then
-Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 19
-Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 65
-      end
-if getgenv().TPPlayer == "power" then
-Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 70
-Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
-elseif getgenv().TPPlayer == "high power" then
-Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
-Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 250
-      end
-if getgenv().TPPlayer == "super high power" then
-Game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 200
-Game.Players.LocalPlayer.Character.Humanoid.JumpPower = 500
-      end
+local Input = mainTab:CreateInput({
+   Name = "tp player",
+   CurrentValue = "1",
+   PlaceholderText = "player",
+   RemoveTextAfterFocusLost = false,
+   Flag = "Input1",
+   Callback = function(Text)
+   local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+local p2 = (Text)
+local pos = p1.CFrame
+
+p1.CFrame = game.Players[p2].Character.HumanoidRootPart.CFrame
+
+wait(5)
+
+p1.CFrame = pos
    end,
 })
