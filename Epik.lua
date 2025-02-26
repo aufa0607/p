@@ -94,7 +94,7 @@ p1.CFrame = pos
 })
 
 local murTab = Window:CreateTab("🗡️mm2", nil) -- Title, Image
-local Section = murmainTab:CreateSection("esp")
+local Section = murTab:CreateSection("esp")
 
 local Button = murTab:CreateButton({
    Name = "esp",
