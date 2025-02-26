@@ -92,3 +92,13 @@ wait(5)
 p1.CFrame = pos
    end,
 })
+
+local murTab = Window:CreateTab("🗡️mm2", nil) -- Title, Image
+local Section = murmainTab:CreateSection("esp")
+
+local Button = murTab:CreateButton({
+   Name = "esp",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Ihaveash0rtnamefordiscord/Releases/main/MurderMystery2HighlightESP"))();
+   end,
+})
