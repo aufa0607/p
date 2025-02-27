@@ -92,8 +92,8 @@ p1.CFrame = game.Players[p2].Character.HumanoidRootPart.CFrame
 local Button = mainTab:CreateButton({
    Name = "favorite speed",
    Callback = function()
-   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 19
-   game.Players.LocalPlayer.Character.Humanoid.JumpPower = 55
+   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 17
+   game.Players.LocalPlayer.Character.Humanoid.JumpPower = 51
    end,
 })
 
