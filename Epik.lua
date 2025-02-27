@@ -42,7 +42,7 @@ end
 
 Rayfield:Notify({
    Title = "look",
-   Content = "zidanbot",
+   Content = "zidan bot",
    Duration = 6.5,
    Image = 4483362458,
 })
@@ -89,7 +89,7 @@ p1.CFrame = game.Players[p2].Character.HumanoidRootPart.CFrame
    end,
 })
 
-local Button = Tab:CreateButton({
+local Button = mainTab:CreateButton({
    Name = "favorite speed",
    Callback = function()
    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 19
