@@ -86,10 +86,14 @@ local p2 = (Text)
 local pos = p1.CFrame
 
 p1.CFrame = game.Players[p2].Character.HumanoidRootPart.CFrame
+   end,
+})
 
-wait(5)
-
-p1.CFrame = pos
+local Button = Tab:CreateButton({
+   Name = "favorite speed",
+   Callback = function()
+   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 19
+   game.Players.LocalPlayer.Character.Humanoid.JumpPower = 55
    end,
 })
 
