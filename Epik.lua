@@ -113,3 +113,17 @@ local Button = murTab:CreateButton({
    loadstring(game:HttpGet("https://raw.githubusercontent.com/Ihaveash0rtnamefordiscord/Releases/main/MurderMystery2HighlightESP"))();
    end,
 })
+
+local Dropdown = murTab:CreateDropdown({
+   Name = "teleport",
+   Options = {"lobby","mill base"},
+   CurrentOption = {"lobby"},
+   MultipleOptions = false,
+   Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Options)
+  if Options == "lobby" then
+            teleport(game:GetService("Workspace").Lobby.Map.Fountain.Nikilis.Knife)
+         elseif Options == "mill base" then
+            teleport(game:GetService("Workspace").MilBase.Map.Part.CFrame)
+   end,
+})
