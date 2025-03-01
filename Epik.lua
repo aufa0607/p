@@ -114,24 +114,14 @@ local Button = murTab:CreateButton({
    end,
 })
 
-local Dropdown = murTab:CreateDropdown({
-   Name = "teleport",
-   Options = {"lobby","mill base"},
-   CurrentOption = {"lobby"},
-   MultipleOptions = false,
-   Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Options)
-  getgenv().TPPlayer = (Options)
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "teleport",
-   Callback = function()
-   if getgenv().TPPlayer = "lobby" then
-            teleport(game:GetService("Workspace").Lobby.Map.Fountain.Nikilis.Knife)
-         elseif getgenv().TPPlayer = "mill base" then
-            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 17
-         end
+local Slider = Tab:CreateSlider({
+   Name = "speed mm2",
+   Range = {0, 25},
+   Increment = 1,
+   Suffix = "speed",
+   CurrentValue = 16,
+   Flag = "Slider2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+  game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
    end,
 })
