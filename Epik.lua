@@ -124,7 +124,7 @@ local Dropdown = murTab:CreateDropdown({
   if Options == "lobby" then
             teleport(game:GetService("Workspace").Lobby.Map.Fountain.Nikilis.Knife)
          elseif Options == "mill base" then
-            teleport(game:GetService("Workspace").MilBase.Map.Part.CFrame)
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
          end
    end,
 })
