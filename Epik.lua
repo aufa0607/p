@@ -97,6 +97,13 @@ local Button = mainTab:CreateButton({
    end,
 })
 
+local Button = mainTab:CreateButton({
+   Name = "Button Example",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+   end,
+})
+
 local murTab = Window:CreateTab("🗡️mm2", nil) -- Title, Image
 local Section = murTab:CreateSection("esp")
 
