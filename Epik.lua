@@ -1,6 +1,6 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
-   Name = "epik v1.0 beta",
+   Name = "epik v1.0",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "epik",
    LoadingSubtitle = "by aufa",
@@ -33,7 +33,7 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-getgenv().TPPlayer = "string"
+getgenv().TPPlayer = nil
 
 function teleport(teleportplace)
   local player = game.Players.LocalPlayer
@@ -42,7 +42,7 @@ end
 
 Rayfield:Notify({
    Title = "look",
-   Content = "zidan bot",
+   Content = "nice",
    Duration = 6.5,
    Image = 4483362458,
 })
@@ -74,15 +74,82 @@ local Slider = mainTab:CreateSlider({
    end,
 })
 
+local Button = mainTab:CreateButton({
+   Name = "noclip",
+   Callback = function()
+   local Noclip = nil
+local Clip = nil
+
+function noclip()
+	Clip = false
+	local function Nocl()
+		if Clip == false and game.Players.LocalPlayer.Character ~= nil then
+			for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+				if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
+					v.CanCollide = false
+				end
+			end
+		end
+		wait(0.21) -- basic optimization
+	end
+	Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
+end
+
+function clip()
+	if Noclip then Noclip:Disconnect() end
+	Clip = true
+end
+
+noclip() -- to toggle noclip() and clip()
+   end,
+})
+
+local Button = mainTab:CreateButton({
+   Name = "clip",
+   Callback = function()
+   local Noclip = nil
+local Clip = nil
+
+function noclip()
+	Clip = false
+	local function Nocl()
+		if Clip == false and game.Players.LocalPlayer.Character ~= nil then
+			for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+				if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
+					v.CanCollide = false
+				end
+			end
+		end
+		wait(0.21) -- basic optimization
+	end
+	Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
+end
+
+function clip()
+	if Noclip then Noclip:Disconnect() end
+	Clip = true
+end
+
+clip() -- to toggle noclip() and clip()
+   end,
+})
+
 local Input = mainTab:CreateInput({
    Name = "tp player",
-   CurrentValue = "1",
+   CurrentValue = "",
    PlaceholderText = "player",
    RemoveTextAfterFocusLost = false,
    Flag = "Input1",
-   Callback = function(Text)
-   local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
-local p2 = (Text)
+   Callback = function(PlayerName)
+      Player = PlayerName
+   end,
+})
+
+local Button = mainTab:CreateButton({
+   Name = "teleport",
+   Callback = function()
+  local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+local p2 = (Player)
 local pos = p1.CFrame
 
 p1.CFrame = game.Players[p2].Character.HumanoidRootPart.CFrame
@@ -114,14 +181,153 @@ local Button = murTab:CreateButton({
    end,
 })
 
-local Slider = Tab:CreateSlider({
+local Section = murTab:CreateSection("tp to gun")
+
+local Button = murTab:CreateButton({
+   Name = "workshop",
+   Callback = function()
+      teleport(game:GetService("Workspace").Workshop.GunDrop.CFrame)
+      
+   end,
+})
+
+local Button = murTab:CreateButton({
+   Name = "Mansion 2",
+   Callback = function()
+      teleport(game:GetService("Workspace").Mansion2.GunDrop.CFrame)
+      
+   end,
+})
+
+local Button = murTab:CreateButton({
+   Name = "MilBase",
+   Callback = function()
+      teleport(game:GetService("Workspace").MilBase.GunDrop.CFrame)
+   end,
+})
+
+local Button = murTab:CreateButton({
+   Name = "hotel",
+   Callback = function()
+      teleport(game:GetService("Workspace").Hotel.GunDrop.CFrame)
+   end,
+})
+
+local Button = murTab:CreateButton({
+   Name = "factory",
+   Callback = function()
+      teleport(game:GetService("Workspace").Factory.GunDrop.CFrame)
+   end,
+})
+
+local Button = murTab:CreateButton({
+   Name = "station",
+   Callback = function()
+      teleport(game:GetService("Workspace").Station.GunDrop.CFrame)
+   end,
+})
+
+local Button = murTab:CreateButton({
+   Name = "biolab",
+   Callback = function()
+      teleport(game:GetService("Workspace").BioLab.GunDrop.CFrame)
+   end,
+})
+
+local Button = murTab:CreateButton({
+   Name = "bank 2",
+   Callback = function()
+      teleport(game:GetService("Workspace").Bank2.GunDrop.CFrame)
+   end,
+})
+
+local Button = murTab:CreateButton({
+   Name = "house 2",
+   Callback = function()
+      teleport(game:GetService("Workspace").House2.GunDrop.CFrame)
+   end,
+})
+
+local Button = murTab:CreateButton({
+   Name = "ice castle",
+   Callback = function()
+      teleport(game:GetService("Workspace").IceCastle.GunDrop.CFrame)
+   end,
+})
+
+local Button = murTab:CreateButton({
+   Name = "milbase coin (test)",
+   Callback = function()
+      while true do
+      teleport(game:GetService("Workspace").MilBase.CoinContainer.Coin_Server.CoinVisual.CFrame)
+      wait(4)
+      end
+   end,
+})
+
+local Section = murTab:CreateSection("player")
+
+local Slider = murTab:CreateSlider({
    Name = "speed mm2",
    Range = {0, 25},
    Increment = 1,
    Suffix = "speed",
    CurrentValue = 16,
    Flag = "Slider2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-  game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
+   Callback = function(Speed2)
+  game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Speed2)
    end,
 })
+
+local Button = murTab:CreateButton({
+   Name = "lobby",
+   Callback = function()
+  teleport(game:GetService("Workspace").Lobby.Leaderboards.GiftsLeaderboard.LeaderboardPart.CFrame)
+   end,
+})
+
+local spdTab = Window:CreateTab("⚡Speed City", nil) -- Title, Image
+local Section = spdTab:CreateSection("teleport")
+
+local Keybind = spdTab:CreateKeybind({
+   Name = "black orb",
+   CurrentKeybind = "Q",
+   HoldToInteract = false,
+   Flag = "Keybind1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Keybind)
+      while true do
+   teleport(game:GetService("Workspace").GhostCity.GhostOrbsMega.GhostMega2.Outside.CFrame)
+   wait(0)
+      end
+   end,
+})
+
+local sptTab = Window:CreateTab("🔑Keyless Script", nil) -- Title, Image
+local Section = sptTab:CreateSection("All SCript")
+
+local Button = sptTab:CreateButton({
+   Name = "Bubble Gum Smoke",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/etqjuyreal/smoke/refs/heads/main/bgsi.lua'))()
+   Rayfield:Notify({
+   Title = "Launch Smoke",
+   Content = "Nice",
+   Duration = 6.5,
+   Image = 4483362458,
+})
+   end,
+})
+
+local Button = sptTab:CreateButton({
+   Name = "",
+   Callback = function()
+Rayfield:Notify({
+   Title = "coming soon",
+   Content = "in progress",
+   Duration = 6.5,
+   Image = 4483362458,
+})
+   end,
+})
+
+Rayfield:LoadConfiguration()
