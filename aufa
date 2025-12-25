@@ -1,121 +1,392 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Window = Rayfield:CreateWindow({
+   Name = "epik v1.0",
+   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "epik",
+   LoadingSubtitle = "by aufa",
+   Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+      
+   DisableRayfieldPrompts = true,
+   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
 
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "scriptaufa", HidePremium = false, IntroText = "aufa", SaveConfig = true, ConfigFolder = "scriptaufa"})
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
 
-OrionLib:MakeNotification({
-	Name = "hey",
-	Content = "dont forget to subcribe",
-	Image = "rbxassetid://4483345998",
-	Time = 5
+   Discord = {
+      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "native",
+      Subtitle = "Key System",
+      Note = "call aufa", -- Use this to tell the user how to get a key
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"https://raw.githubusercontent.com/aufa0607/p/refs/heads/main/key"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
 })
 
+getgenv().TPPlayer = nil
 
-local TutTab = Window:MakeTab({
-	Name = "main",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
+function teleport(teleportplace)
+  local player = game.Players.LocalPlayer
+  player.Character.HumanoidRootPart.CFrame = teleportplace
+end
+
+Rayfield:Notify({
+   Title = "look",
+   Content = "nice",
+   Duration = 6.5,
+   Image = 4483362458,
 })
 
-local Section = TutTab:AddSection({
-	Name = "script section"
+local mainTab = Window:CreateTab("🏠main", nil) -- Title, Image
+local Section = mainTab:CreateSection("main")
+
+local Dropdown = Tab:CreateDropdown({
+   Name = "aja",
+   Options = {"apa","aja","lah"},
+   CurrentOption = {"apa"},
+   MultipleOptions = false,
+   Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(apa)
+   aja = apa
+   end,
 })
 
-TutTab:AddButton({
-	Name = "antilag",
-	Callback = function(Value)
-      		print("suscribe")
-  	end    
+local Button = Tab:CreateButton({
+   Name = "apa",
+   Callback = function()
+   print(apa)
+   end,
 })
 
-TutTab:AddButton({
-	Name = "noclip",
-	Callback = function(Value)
-      		print("suscribe")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/p"))();
-  	end    
+local Slider = mainTab:CreateSlider({
+   Name = "speed boost",
+   Range = {0, 300},
+   Increment = 1,
+   Suffix = "speed",
+   CurrentValue = 16,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
+   end,
 })
 
-TutTab:AddButton({
-	Name = "fly",
-	Callback = function(Value)
-      		print("suscribe")
-loadstring(game:HttpGet(("https://pastebin.com/raw/nvDa9tQM"),true))();
-  	end    
+local Slider = mainTab:CreateSlider({
+   Name = "jump boost",
+   Range = {0, 300},
+   Increment = 1,
+   Suffix = "jump",
+   CurrentValue = 50,
+   Flag = "Slider2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+         game.Players.LocalPlayer.Character.Humanoid.JumpPower = (Value)
+   end,
 })
 
+local Button = mainTab:CreateButton({
+   Name = "noclip",
+   Callback = function()
+   local Noclip = nil
+local Clip = nil
 
-local VisTab = Window:MakeTab({
-	Name = "murdermystery",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
+function noclip()
+	Clip = false
+	local function Nocl()
+		if Clip == false and game.Players.LocalPlayer.Character ~= nil then
+			for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+				if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
+					v.CanCollide = false
+				end
+			end
+		end
+		wait(0.21) -- basic optimization
+	end
+	Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
+end
+
+function clip()
+	if Noclip then Noclip:Disconnect() end
+	Clip = true
+end
+
+noclip() -- to toggle noclip() and clip()
+   end,
 })
 
-local Section = VisTab:AddSection({
-	Name = "visual section"
+local Button = mainTab:CreateButton({
+   Name = "clip",
+   Callback = function()
+   local Noclip = nil
+local Clip = nil
+
+function noclip()
+	Clip = false
+	local function Nocl()
+		if Clip == false and game.Players.LocalPlayer.Character ~= nil then
+			for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+				if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
+					v.CanCollide = false
+				end
+			end
+		end
+		wait(0.21) -- basic optimization
+	end
+	Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
+end
+
+function clip()
+	if Noclip then Noclip:Disconnect() end
+	Clip = true
+end
+
+clip() -- to toggle noclip() and clip()
+   end,
 })
 
-VisTab:AddButton({
-	Name = "esp",
-	Callback = function(Value)
-      		print("suscribe")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Ihaveash0rtnamefordiscord/Releases/main/MurderMystery2HighlightESP"))();
-  	end    
+local Input = mainTab:CreateInput({
+   Name = "tp player",
+   CurrentValue = "",
+   PlaceholderText = "player",
+   RemoveTextAfterFocusLost = false,
+   Flag = "Input1",
+   Callback = function(PlayerName)
+      Player = PlayerName
+   end,
 })
 
+local Button = mainTab:CreateButton({
+   Name = "teleport",
+   Callback = function()
+  local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+local p2 = (Player)
+local pos = p1.CFrame
 
-local PetTab = Window:MakeTab({
-	Name = "petsimx",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
+p1.CFrame = game.Players[p2].Character.HumanoidRootPart.CFrame
+   end,
 })
 
-local Section = PetTab:AddSection({
-	Name = "script section"
+local Button = mainTab:CreateButton({
+   Name = "favorite speed",
+   Callback = function()
+   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 17
+   game.Players.LocalPlayer.Character.Humanoid.JumpPower = 51
+   end,
 })
 
-PetTab:AddToggle({
-	Name = "comingsoon",
-	Default = false,
-	Callback = function(Value)
-		print(Value)
-	end    
+local Button = mainTab:CreateButton({
+   Name = "inf yeld",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+   end,
 })
 
+local murTab = Window:CreateTab("🗡️mm2", nil) -- Title, Image
+local Section = murTab:CreateSection("esp")
 
-local BloTab = Window:MakeTab({
-	Name = "bloxfruit",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
+local Button = murTab:CreateButton({
+   Name = "esp",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Ihaveash0rtnamefordiscord/Releases/main/MurderMystery2HighlightESP"))();
+   end,
 })
 
-local Section = BloTab:AddSection({
-	Name = "script section"
+local Section = murTab:CreateSection("tp to gun")
+
+local Button = murTab:CreateButton({
+   Name = "workshop",
+   Callback = function()
+      teleport(game:GetService("Workspace").Workshop.GunDrop.CFrame)
+      
+   end,
 })
 
-BloTab:AddButton({
-	Name = "comingsoon",
-	Callback = function(Value)
-      		print("suscribe")
-  	end    
+local Button = murTab:CreateButton({
+   Name = "Mansion 2",
+   Callback = function()
+      teleport(game:GetService("Workspace").Mansion2.GunDrop.CFrame)
+      
+   end,
 })
 
-local DooTab = dow:MakeTab({
-	Name = "doors",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
+local Button = murTab:CreateButton({
+   Name = "MilBase",
+   Callback = function()
+      teleport(game:GetService("Workspace").MilBase.GunDrop.CFrame)
+   end,
 })
 
-local Section = DooTab:AddSection({
-	Name = "esp section"
+local Button = murTab:CreateButton({
+   Name = "hotel",
+   Callback = function()
+      teleport(game:GetService("Workspace").Hotel.GunDrop.CFrame)
+   end,
 })
 
-DooTab:AddToggle({
-	Name = "esp key",
-	Default = false,
-	Callback = function(Value)
-		print(Value)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/aufa0607/p/main/esp"))();
-	end    
+local Button = murTab:CreateButton({
+   Name = "factory",
+   Callback = function()
+      teleport(game:GetService("Workspace").Factory.GunDrop.CFrame)
+   end,
 })
 
-OrionLib:Init()
+local Button = murTab:CreateButton({
+   Name = "station",
+   Callback = function()
+      teleport(game:GetService("Workspace").Station.GunDrop.CFrame)
+   end,
+})
+
+local Button = murTab:CreateButton({
+   Name = "biolab",
+   Callback = function()
+      teleport(game:GetService("Workspace").BioLab.GunDrop.CFrame)
+   end,
+})
+
+local Button = murTab:CreateButton({
+   Name = "bank 2",
+   Callback = function()
+      teleport(game:GetService("Workspace").Bank2.GunDrop.CFrame)
+   end,
+})
+
+local Button = murTab:CreateButton({
+   Name = "house 2",
+   Callback = function()
+      teleport(game:GetService("Workspace").House2.GunDrop.CFrame)
+   end,
+})
+
+local Button = murTab:CreateButton({
+   Name = "ice castle",
+   Callback = function()
+      teleport(game:GetService("Workspace").IceCastle.GunDrop.CFrame)
+   end,
+})
+
+local Button = murTab:CreateButton({
+   Name = "hospital",
+   Callback = function()
+      teleport(game:GetService("Workspace").Hospital3.GunDrop.CFrame)
+   end,
+})
+
+local Button = murTab:CreateButton({
+   Name = "ski village",
+   Callback = function()
+      teleport(game:GetService("Workspace").SkiVillage.GunDrop.CFrame)
+   end,
+})
+
+local Button = murTab:CreateButton({
+   Name = "facility",
+   Callback = function()
+      teleport(game:GetService("Workspace").ResearchFacility.GunDrop.CFrame)
+   end,
+})
+
+local Button = murTab:CreateButton({
+   Name = "krismas italy",
+   Callback = function()
+      teleport(game:GetService("Workspace").ChristmasItaly.GunDrop.CFrame)
+   end,
+})
+
+local Button = murTab:CreateButton({
+   Name = "workplace",
+   Callback = function()
+      teleport(game:GetService("Workspace").Workplace.GunDrop.CFrame)
+   end,
+})
+
+local Toggle = murTab:CreateToggle({
+   Name = "Toggle Example",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(coins)
+function coin()
+      if coins == true then
+      print(test)
+      wait(4)
+      end
+
+         coin()
+      end
+   end,
+})
+
+local Section = murTab:CreateSection("player")
+
+local Slider = murTab:CreateSlider({
+   Name = "speed mm2",
+   Range = {0, 25},
+   Increment = 1,
+   Suffix = "speed",
+   CurrentValue = 16,
+   Flag = "Slider2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Speed2)
+  game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Speed2)
+   end,
+})
+
+local Button = murTab:CreateButton({
+   Name = "lobby",
+   Callback = function()
+  teleport(game:GetService("Workspace").Lobby.Leaderboards.GiftsLeaderboard.LeaderboardPart.CFrame)
+   end,
+})
+
+local spdTab = Window:CreateTab("⚡Speed City", nil) -- Title, Image
+local Section = spdTab:CreateSection("teleport")
+
+local Keybind = spdTab:CreateKeybind({
+   Name = "black orb",
+   CurrentKeybind = "Q",
+   HoldToInteract = false,
+   Flag = "Keybind1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Keybind)
+      while true do
+   teleport(game:GetService("Workspace").GhostCity.GhostOrbsMega.GhostMega2.Outside.CFrame)
+   wait(0)
+      end
+   end,
+})
+
+local sptTab = Window:CreateTab("🔑Keyless Script", nil) -- Title, Image
+local Section = sptTab:CreateSection("All SCript")
+
+local Button = sptTab:CreateButton({
+   Name = "Bubble Gum Smoke",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/etqjuyreal/smoke/refs/heads/main/bgsi.lua'))()
+   Rayfield:Notify({
+   Title = "Launch Smoke",
+   Content = "Nice",
+   Duration = 6.5,
+   Image = 4483362458,
+})
+   end,
+})
+
+local Button = sptTab:CreateButton({
+   Name = "",
+   Callback = function()
+Rayfield:Notify({
+   Title = "coming soon",
+   Content = "in progress",
+   Duration = 6.5,
+   Image = 4483362458,
+})
+   end,
+})
+
+Rayfield:LoadConfiguration()
